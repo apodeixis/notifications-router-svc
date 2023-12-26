@@ -1,0 +1,27 @@
+allOf:
+  - $ref: '#/components/schemas/DeliveryKey'
+  - type: object
+    required:
+      - attributes
+    properties:
+      attributes:
+        type: object
+        required:
+          - destination
+          - destination_type
+          - status
+        properties:
+          destination:
+            type: string
+          destination_type:
+            type: string
+          status:
+            type: string
+            enum:
+              - not_sent
+              - failed
+              - sent
+              - canceled
+          sent_at:
+            type: integer
+            format: int64

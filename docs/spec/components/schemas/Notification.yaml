@@ -1,0 +1,38 @@
+allOf:
+  - $ref: '#/components/schemas/NotificationKey'
+  - type: object
+    required:
+      - attributes
+      - relationships
+    properties:
+      attributes:
+        type: object
+        required:
+          - topic
+          - message
+          - created_at
+        properties:
+          topic:
+            type: string
+          message:
+            $ref: '#/components/schemas/Message'
+          channel:
+            type: string
+          created_at:
+            type: integer
+            format: int64
+
+      relationships:
+        type: object
+        required:
+          - deliveries
+        properties:
+          deliveries:
+            type: object
+            required:
+              - data
+            properties:
+              data:
+                type: array
+                items:
+                  $ref: '#/components/schemas/DeliveryKey'

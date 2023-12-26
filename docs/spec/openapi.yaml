@@ -1,0 +1,7 @@
+openapi: 3.0.0
+info:
+  version: 0.1.0
+  title: Apodeixis notifications-router-svc
+  license:
+    name: MIT
+    url: https://github.com/apodeixis/notifications-router-svc/blob/main/LICENSE

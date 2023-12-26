@@ -1,0 +1,33 @@
+allOf:
+  - $ref: '#/components/schemas/CreateNotificationKey'
+  - type: object
+    required:
+      - attributes
+      - relationships
+    properties:
+      attributes:
+        type: object
+        required:
+          - topic
+          - message
+        properties:
+          topic:
+            type: string
+          message:
+            $ref: '#/components/schemas/Message'
+          channel:
+            type: string
+      relationships:
+        type: object
+        required:
+          - destinations
+        properties:
+          destinations:
+            type: object
+            required:
+              - data
+            properties:
+              data:
+                type: array
+                items:
+                  $ref: '#/components/schemas/DestinationKey'
