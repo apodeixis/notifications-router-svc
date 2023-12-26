@@ -2,6 +2,8 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
+[![Documentation](https://img.shields.io/badge/GitHub%20Pages-222222?style=for-the-badge&logo=GitHub)]( https://apodeixis.github.io/notifications-router-svc)
+
 This is a Go microservice which allows to send notifications to users via different channels (email, slack, etc).
 Worker services subscribe to this, whilst clients work via interface API provided by this service.
 
