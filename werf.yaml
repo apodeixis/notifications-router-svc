@@ -15,7 +15,9 @@ shell:
   setup:
     - export CGO_ENABLED=0
     - export GOOS=linux
-    - go build -o /usr/local/bin/notifications-router-svc /go/src/github.com/apodeixis/notifications-router-svc/main.go
+    - cd /go/src/github.com/apodeixis/notifications-router-svc
+    - go mod download
+    - go build -o /usr/local/bin/notifications-router-svc main.go
 
 ---
 image: service
